@@ -1,0 +1,48 @@
+{ 
+  "device_name": "##DEVICE_NAME##",
+  "listening_port" : ##BT_PORT##,                       
+  
+  
+  "storage_path" : "/btsync/.sync",               // storage path
+
+  "check_for_updates" : true, 
+  "use_upnp" : true,                              // use UPnP for port mapping
+
+  // limits in kB/s : 0 - no limit
+  "download_limit" : 0,                       
+  "upload_limit" : 0, 
+
+/* remove "listen" field to disable WebUI
+   remove "login" and "password" fields to disable credentials check
+   */
+  "webui" :
+  {
+    "listen" : "##LISTEN##",
+    "login" : "admin",
+    "password" : "password"
+  },
+
+
+
+   
+  "shared_folders" :
+    [
+      {
+        //  use --generate-secret in command line to create new secret
+        "secret" : "##SECRET##",    // * required field
+        "dir" : "/btsync/data",     // * required field
+
+        //  use relay server when direct connection fails
+        "use_relay_server" : true,
+        "use_tracker" : true, 
+        "use_dht" : false,
+        "search_lan" : true,
+        //  enable sync trash to store files deleted on remote devices
+        "use_sync_trash" : false,
+        //  specify hosts to attempt connection without additional search     
+        "known_hosts" :
+          []
+      }
+    ]
+
+}
