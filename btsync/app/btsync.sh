@@ -36,6 +36,9 @@ sed -i s/##DEVICE_NAME##/$NAME/ btsync.conf
 sed -i s/##BT_PORT##/$BT_PORT/ btsync.conf
 sed -i s/##SECRET##/$SECRET/ btsync.conf
 
+# prepare data directory
+mkdir -p /btsync_data/data/
+
 echo "=> Running btsync..."
 
 echo "By using this application (btsync), you agree to our Privacy Policy and Terms."
@@ -43,4 +46,4 @@ echo "http://www.bittorrent.com/legal/privacy"
 echo "http://www.bittorrent.com/legal/terms-of-use"
 
 
-./btsync --nodaemon --config btsync.conf
+/btsync --nodaemon --config btsync.conf

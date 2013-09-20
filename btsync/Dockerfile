@@ -9,9 +9,9 @@ RUN apt-get install -y wget
 ADD app/ /
 
 # create btsync data volume (can be mount on host to ensure data persistence)
-VOLUME ["/btsync"]
+VOLUME ["/btsync_data"]
 
 
 
 # exec run script by default
-CMD /btsync
+CMD /btsync.sh

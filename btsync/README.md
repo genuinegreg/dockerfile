@@ -32,7 +32,7 @@ Start a btsync node named "docker_node", sharing "####...####" secret on port 12
 Start a btsync node named "docker_node", sharing "####...####" secret on port 12345 and persist data on /data/docker/btsync
 
 	docker run -d \
-	-v /data/docker/btsync:/btsync/data \	# map host directory /data/docker/btsync on docker volume /btsync/data
+	-v /data/docker/btsync:/btsync_data \	# map host directory /data/docker/btsync on docker volume /btsync_data
 	-p 12345:27027 \						# map port 27027 on host port 12345
 	-e NAME="docker_node" \					# name the btsync node docker_node
 	-e SECRET="####...####" \				# chose the secret
