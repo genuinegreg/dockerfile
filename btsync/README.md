@@ -37,3 +37,12 @@ Start a btsync node named "docker_node", sharing "####...####" secret on port 12
 	-e NAME="docker_node" \					# name the btsync node docker_node
 	-e SECRET="####...####" \				# chose the secret
 	genuinegreg/btsync
+
+
+
+You could use the docker-btsyn-helper located in /bin
+
+	./bin/docker-btsyn-helper SECRET PORT
+	
+	./bin/docker-btsyn-helper ####...#### 12345
+
