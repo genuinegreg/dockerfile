@@ -1,15 +1,17 @@
 Bittorent Sync Docker Image
 ==================================
 
-Build a btsync docker image.
-Webui is disable and config is done thrue env variable.
+Build a bittorrent-sync docker image.
 
-btsync executable is not bundle in this image but downloaded a runtime (bittorent licence issue).
+WebUi is disable and configuration is done with ENV variable
 
-Webui is disable. You can configure btsync via ENV variable.
-Node name default to "default_name"
-Bittorrent port default to "27027"
-A random secret is generated if you don't provide one
+btsync executable is not bundle but downloaded when the container is run (bittorent licence issue).
+
+ - Webui is disable. 
+ - You can configure btsync via ENV variable. 
+ - Node name default to "default_name"
+ - Bittorrent port default to "27027"
+ - A random secret is generated if you don't provide one (watch the logs)
 
 Usage
 -----------
