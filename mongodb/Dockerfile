@@ -16,9 +16,11 @@ RUN ln -s /bin/true /sbin/initctl
 # Install MongoDB
 RUN apt-get update
 RUN apt-get install -y mongodb-10gen
+RUN apt-get clean
 
 
 # Create the MongoDB data directory
-VOLUME /data/db
+RUN mkdir -p /data/db
+# VOLUME /data/db
 
 CMD /usr/bin/mongod
