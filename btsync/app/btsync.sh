@@ -38,6 +38,7 @@ sed -i s/##SECRET##/$SECRET/ btsync.conf
 
 # prepare data directory
 mkdir -p /btsync_data/data/
+mkdir -p /btsync_data/.sync/
 
 echo "=> Running btsync..."
 
