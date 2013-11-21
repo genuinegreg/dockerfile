@@ -1,5 +1,5 @@
 
-GIT_REV=`date +"%Y-%m-%d"`.`git rev-parse --short HEAD`
+GIT_REV=`git describe`
 
 all: nodejs btsync mongodb
 
