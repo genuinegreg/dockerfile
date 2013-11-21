@@ -30,4 +30,4 @@ RUN apt-get autoremove -y autoconf automake build-essential git libtool pkg-conf
 
 
 
-CMD ffmpeg
+CMD ["ffmpeg"]

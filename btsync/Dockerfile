@@ -11,7 +11,7 @@ VOLUME ["/data/"]
 EXPOSE 1337
 
 # exec run script by default
-CMD /btsync.sh
+CMD ["/btsync.sh"]
 
 # add docker-btsync sources
 ADD app/ /

@@ -12,4 +12,4 @@ RUN apt-get autoremove -y
 RUN apt-get clean
 
 
-CMD node
+CMD ["node"]

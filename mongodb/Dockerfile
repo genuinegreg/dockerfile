@@ -26,4 +26,4 @@ VOLUME /data/db
 EXPOSE 27017 28017
 
 
-CMD /usr/bin/mongod
+CMD ["mongod"]
