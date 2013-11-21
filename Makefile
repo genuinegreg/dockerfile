@@ -1,14 +1,19 @@
+
+GIT_REV=`date +"%Y-%m-%d"`.`git rev-parse --short HEAD`
+
 all: nodejs btsync mongodb
 
 forcelook:
 	true
 
 nodejs: forcelook
-	docker build -t genuinegreg/nodejs nodejs
+	docker build -rm -t genuinegreg/nodejs nodejs
+	docker tag genuinegreg/nodejs genuinegreg/nodejs\:$(GIT_REV)
 
 btsync: forcelook
-	docker build -t genuinegreg/btsync btsync
+	docker build -rm -t genuinegreg/btsync btsync
+	docker tag genuinegreg/btsync genuinegreg/btsync\:$(GIT_REV)
 
 mongodb: forcelook
-	docker build -t genuinegreg/mongodb mongodb
-	
+	docker build -rm -t genuinegreg/mongodb mongodb
+	docker tag genuinegreg/mongodb genuinegreg/mongodb\:$(GIT_REV)
