@@ -20,7 +20,10 @@ RUN apt-get clean
 
 
 # Create the MongoDB data directory
-RUN mkdir -p /data/db
-# VOLUME /data/db
+VOLUME /data/db
+
+# expose port
+EXPOSE 27017 28017
+
 
 CMD /usr/bin/mongod
